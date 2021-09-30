@@ -1,9 +1,13 @@
+*{
+  cursor: url("./img/cursor/cursor.png") , pointer;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: Lato, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 @font-face {
   font-family: 'Lato';

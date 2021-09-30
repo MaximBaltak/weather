@@ -1,9 +1,11 @@
 import './App.css';
+import MainPage from "./components/mainPage/MainPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Это наше приложение</h1>
+    <div className="app">
+      <MainPage/>
     </div>
   );
 }
