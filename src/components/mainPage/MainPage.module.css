@@ -5,6 +5,7 @@
   width: 514px;
 }
 .main .title {
+  font-style: normal;
   text-align: center;
   font-weight: 400;
   font-size: 48px;
@@ -12,6 +13,7 @@
   margin-left: 81px;
 }
 .main .search {
+  font-style: normal;
   display: block;
   margin-top: 56px;
   width: 514px;
@@ -41,6 +43,7 @@
   transform: rotate(90deg) translate(27px, 25px);
 }
 .main .wap button {
+  font-style: normal;
   display: block;
   border: none;
   outline: none;
@@ -58,6 +61,7 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main .p {
+  font-style: normal;
   text-align: center;
   margin-top: 36px;
   font-weight: 400;
@@ -65,6 +69,7 @@
   color: #FFFFFF;
 }
 .main .gps {
+  font-style: normal;
   display: block;
   margin: 0 auto;
   width: 300px;
@@ -76,14 +81,19 @@
   color: #FF9900;
   transition: all 0.3s;
 }
-.main .gps img {
+.main .gps svg {
   width: 23px;
   height: 23px;
   margin-right: 10px;
+  fill: #0477B8;
+  transition: all 0.3s;
 }
-.main .gps:hover {
+.main button:hover {
   color: red;
   transform: scale(1.1);
+}
+.main button:hover svg {
+  fill: red;
 }
 
 /*# sourceMappingURL=MainPage.module.css.map */
