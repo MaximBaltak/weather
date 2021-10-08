@@ -15,12 +15,15 @@
   color: #FFFFFF;
   margin: 0;
 }
-.navigation .wap p {
+.navigation .wap a {
+  text-decoration: none;
   display: inline-block;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   color: rgba(255, 255, 255, 0.63);
+}
+.navigation .wap a p {
   margin: 0;
 }
 .navigation .wap button {

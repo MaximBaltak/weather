@@ -1,9 +1,6 @@
 *{
   cursor: url("./img/cursor/cursorWhite.png") , pointer;
 }
-html{
-  background: url("./img/nigth.png") center center/cover no-repeat;
-}
 
 body {
   margin: 0;
@@ -11,7 +8,7 @@ body {
   font-family: Lato, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background: url("./img/nigth.png") center center/cover no-repeat;
 }
 @font-face {
   font-family: 'Lato';

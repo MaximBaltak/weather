@@ -1,13 +1,16 @@
 import './App.css';
-import MainPage from "./components/mainPage/MainPage";
 import InformationPage from "./components/InformationPage/InformationPage";
+import {Route, Switch} from "react-router-dom";
+import MainPageContainer from "./components/mainPage/MainPageContainer";
 
 
 function App() {
   return (
     <div className="app">
-        {/*<MainPage/>*/}
-        <InformationPage/>
+        <Switch>
+            <Route exact path='/'><MainPageContainer/></Route>
+            <Route exact path='/:id'><InformationPage/></Route>
+        </Switch>
     </div>
   );
 }
