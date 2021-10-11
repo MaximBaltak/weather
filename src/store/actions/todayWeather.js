@@ -1,7 +1,7 @@
 const todayWeather=(city)=>{
     return async dispatch=>{
         try {
-            let response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9671e49afa223e121863992b2e3edfbe&units=metric&lang=ru`)
+            let response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={ваш ключ}&units=metric&lang=ru`)
             let json=await response.json()
             console.log(json)
             let body={
