@@ -1,5 +1,7 @@
 const defaultState={
-    listRussiaCity:[]
+    listRussiaCity:[],
+    ChangeCity:'',
+    city:''
 }
 
 const mainPageReducer=(state=defaultState,action)=>{
@@ -7,6 +9,10 @@ const mainPageReducer=(state=defaultState,action)=>{
     switch (action.type){
         case 'ADD_RUSSIA_LIST':
             stateCopy.listRussiaCity=[...action.arr]
+            return stateCopy
+        case 'CITY':
+            stateCopy.ChangeCity=action.text
+            stateCopy.city=stateCopy.ChangeCity
             return stateCopy
         default:
             return state

@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
 import styles from './MainPage.module.scss'
-import {useHistory, useParams} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import listRussiaCity from "../../store/actions/listRussiaCity";
-const MainPage = ({list}) => {
-    let params=useParams()
+const MainPage = ({list,changeCity,city}) => {
     let history=useHistory()
     let dispatch=useDispatch()
     let click=()=>{
-        history.push(`/${params.id=1}`)
+        if(city!==''){
+            history.push(`/city`)
+        }
     }
     useEffect(()=>{
         dispatch(listRussiaCity())
@@ -17,7 +18,7 @@ const MainPage = ({list}) => {
     return (
         <div className={styles.main}>
             <label className={styles.title} htmlFor="cities">Выберите город:</label>
-            <input className={styles.search} type="text" list='cities'/>
+            <input className={styles.search} onChange={e=>changeCity(e.target.value)} value={city} type="text" list='cities'/>
             <datalist id='cities'>
                 {list.map((el,i)=><option key={i} value={el}>{el}</option>)}
             </datalist>

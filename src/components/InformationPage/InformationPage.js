@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
 import Navigation from "../Layouts/Navigation/Navigation";
-import NowInformation from "./NowInformation/NowInformation";
 import WeatherInformation from "./WeatherInformation/WeatherInformation";
+import NowInformationContainer from "./NowInformation/nowInformationContainer";
+import {useSelector} from "react-redux";
 
 const InformationPage = () => {
     let [value,setValue]=useState(true)
+    let name=useSelector(state=>state.mainPage.city)
     let click=()=>{
         setValue(prev=>!prev)
     }
     return (
-        <Navigation click={click} value={value}>
+        <Navigation city={name} click={click} value={value}>
             {
-                value === true ? <NowInformation/>: <WeatherInformation/>
+                value === true ? <NowInformationContainer/> : <WeatherInformation/>
             }
 
         </Navigation>

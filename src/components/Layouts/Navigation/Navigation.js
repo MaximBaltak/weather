@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Navigation.module.scss'
 import {NavLink} from "react-router-dom";
-const Navigation = ({children,value,click}) => {
+const Navigation = ({children,value,click,city}) => {
     return (
         <>
         <nav className={styles.navigation}>
             <div className={styles.wap}>
-            <h1>Москва</h1>
+            <h1>{city}</h1>
                 <NavLink to='/'><p >Сменить город</p></NavLink>
                 <button >
                     <svg viewBox="0 0 30 30" >
